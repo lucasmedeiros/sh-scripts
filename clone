@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Here you define your GitHub repositories directory.
+GIT_DIRECTORY="$HOME/Git"
+
+if [ -z "$1" ]
+then
+  echo "No GitHub repository passed as parameter."
+else
+  cd $GIT_DIRECTORY
+  git clone $1
+fi

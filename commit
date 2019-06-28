@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Here you define your GitHub repositories directory.
+GIT_DIRECTORY="$HOME/Git"
+
+if [ -z "$1" ]
+then
+  message="Committing stuff..."
+else
+  message=$1
+fi
+
+git add .
+git commit -m $message
+git push origin master
