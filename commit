@@ -8,6 +8,16 @@ else
   message=$1
 fi
 
+if [ -z "$2" ]
+then
+  echo "Please, give the branch name:"
+  read branch
+else
+  branch=$1
+fi
+
+git status
 git add .
 git commit -m "$message"
-git push origin master
+git push origin $branch
+
