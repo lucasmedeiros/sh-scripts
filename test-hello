@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Hello, World!"
+
+cp $HOME/.local/bin/test-hello $HOME/Documents/sh-scripts
+cd $HOME/Documents/sh-scripts
+
+git status
+git add .
+git commit -m "Adiciona primeiro comando bash"
+git push origin master
